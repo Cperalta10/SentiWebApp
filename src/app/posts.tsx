@@ -10,133 +10,113 @@ import {
 } from "@material-tailwind/react";
 import { ArrowSmallDownIcon } from "@heroicons/react/24/solid";
 import BlogPostCard from "@/components/blog-post-card";
-
-
-const POSTS = [
-  {
-    img: `/image/blogs/blog2.svg`,
-    tag: "Enterprise",
-    title: "The key new features and changes in Tailwind CSS",
-    desc: "Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens bed design but the back is too high for the beams and angle of the ceiling I also wanted to point out.",
-    date: "10 September 2022",
-    author: {
-      img: `/image/avatar1.jpg`,
-      name: "Ryan Samuel",
-    },
-  },
-  {
-    img: `/image/blogs/blog6.svg`,
-    tag: "Startups",
-    title: "Lyft launching cross-platform service this week",
-    desc: "Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens bed design but the back is too high for the beams and angle of the ceiling I also wanted to point out.",
-    date: "12 September 2022",
-    author: {
-      img: `/image/blogs/blog2.svg`,
-      name: "Nora Hazel",
-    },
-  },
-  {
-    img: `/image/blogs/blog3.svg`,
-    tag: "Trending",
-    title: "6 insights into the French Fashion landscape",
-    desc: "Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens bed design but the back is too high for the beams and angle of the ceiling I also wanted to point out.",
-    date: "16 September 2022",
-    author: {
-      img: `/image/avatar2.jpg`,
-      name: "Otto Gonzalez",
-    },
-  },
-  {
-    img: `/image/blogs/blog4.svg`,
-    tag: "Lifestyle",
-    title: "Autodesk looks to future of 3D printing with Project",
-    desc: "Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens bed design but the back is too high for the beams and angle of the ceiling I also wanted to point out.",
-    date: "18 September 2022",
-    author: {
-      img: `/image/avatar3.jpg`,
-      name: "Ryan Samuel",
-    },
-  },
-  {
-    img: `/image/blogs/blog5.svg`,
-    tag: "Enterprise",
-    title: "Autodesk looks to future of 3D printing with Project",
-    desc: "Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens bed design but the back is too high for the beams and angle of the ceiling I also wanted to point out.",
-    date: "10 September 2022",
-    author: {
-      img: `/image/avatar3.jpg`,
-      name: "Ryan Samuel",
-    },
-  },
-  {
-    img: `/image/blogs/blog6.svg`,
-    tag: "Startups",
-    title: "Lyft launching cross-platform service this week",
-    desc: "Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens bed design but the back is too high for the beams and angle of the ceiling I also wanted to point out.",
-    date: "12 September 2022",
-    author: {
-      img: `/image/avatar2.jpg`,
-      name: "Nora Hazel",
-    },
-  },
-];
+import Image from "next/image";
 
 export function Posts() {
   return (
-    <section className="grid min-h-screen place-items-center p-8">
-      <Tabs value="trends" className="mx-auto max-w-7xl w-full mb-16 ">
-        <div className="w-full flex mb-8 flex-col items-center">
-          <TabsHeader className="h-10 !w-12/12 md:w-[50rem] border border-white/25 bg-opacity-90">
-            <Tab value="trends">Trends</Tab>
-            <Tab value="frontend">Frontend</Tab>
-            <Tab value="backend">Backend</Tab>
-            <Tab value="cloud">Cloud</Tab>
-            <Tab value="ai">AI</Tab>
-            <Tab value="tools">Tools</Tab>
-          </TabsHeader>
-        </div>
-      </Tabs>
-      <Typography variant="h6" className="mb-2">
-        Latest Blog Posts
+    <div className="container mx-auto mt-10 px-4 py-20">
+      <Typography variant="h2" className="text-center mb-12 font-bold">
+        Featured Collection
       </Typography>
-      <Typography variant="h1" className="mb-2">
-        Trends News
-      </Typography>
-      <Typography
-        variant="lead"
-        color="gray"
-        className="max-w-3xl mb-36 text-center text-gray-500"
-      >
-        Check out what&apos;s new in the web development and tech worls! Do not
-        forget to subscribe to our blog and we will notify you with the latest
-        news.
-      </Typography>
-      <div className="container my-auto grid grid-cols-1 gap-x-8 gap-y-16 items-start lg:grid-cols-3">
-        {POSTS.map(({ img, tag, title, desc, date, author }) => (
-          <BlogPostCard
-            key={title}
-            img={img}
-            tag={tag}
-            title={title}
-            desc={desc}
-            date={date}
-            author={{
-              img: author.img,
-              name: author.name,
-            }}
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Item 1 */}
+        <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+          <Image
+            width={400}
+            height={500}
+            src="/logos/Sentimiento-Logotipo-Negro.PNG"
+            alt="Summer Dress"
+            className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-300"
           />
-        ))}
+          <div className="p-4 bg-white">
+            <Typography variant="h6" className="font-semibold">Summer Floral Dress</Typography>
+            <Typography className="text-gray-600 mb-2">Light and breezy floral pattern dress perfect for summer days</Typography>
+            <Typography className="text-xl font-bold text-blue-600">Sold Out (coming soon)</Typography>
+          </div>
+        </div>
+
+        {/* Item 2 */}
+        <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+          <Image
+            width={400}
+            height={500}
+            src="/logos/Sentimiento-Logotipo-Negro.PNG"
+            alt="Casual Jacket"
+            className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+          <div className="p-4 bg-white">
+            <Typography variant="h6" className="font-semibold">Denim Jacket</Typography>
+            <Typography className="text-gray-600 mb-2">Classic denim jacket with modern fit and styling</Typography>
+            <Typography className="text-xl font-bold text-blue-600">Sold Out (coming soon)</Typography>
+          </div>
+        </div>
+
+        {/* Item 3 */}
+        <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+          <Image
+            width={400}
+            height={500}
+            src="/logos/Sentimiento-Logotipo-Negro.PNG"
+            alt="Slim Fit Jeans"
+            className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+          <div className="p-4 bg-white">
+            <Typography variant="h6" className="font-semibold">Slim Fit Jeans</Typography>
+            <Typography className="text-gray-600 mb-2">Premium quality denim with perfect stretch and comfort</Typography>
+            <Typography className="text-xl font-bold text-blue-600">Sold Out (coming soon)</Typography>
+          </div>
+        </div>
+
+        {/* Item 4 */}
+        <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+          <Image
+            width={400}
+            height={500}
+            src="/logos/Sentimiento-Logotipo-Negro.PNG"
+            alt="Casual T-Shirt"
+            className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+          <div className="p-4 bg-white">
+            <Typography variant="h6" className="font-semibold">Premium Cotton T-Shirt</Typography>
+            <Typography className="text-gray-600 mb-2">Ultra-soft cotton t-shirt with modern minimalist design</Typography>
+            <Typography className="text-xl font-bold text-blue-600">Sold Out (coming soon)</Typography>
+          </div>
+        </div>
+
+        {/* Item 5 */}
+        <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+          <Image
+            width={400}
+            height={500}
+            src="/logos/Sentimiento-Logotipo-Negro.PNG"
+            alt="Winter Coat"
+            className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+          <div className="p-4 bg-white">
+            <Typography variant="h6" className="font-semibold">Winter Puffer Coat</Typography>
+            <Typography className="text-gray-600 mb-2">Warm and stylish winter coat with premium insulation</Typography>
+            <Typography className="text-xl font-bold text-blue-600">Sold Out (coming soon)</Typography>
+          </div>
+        </div>
+
+        {/* Item 6 */}
+        <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+          <Image
+            width={400}
+            height={500}
+            src="/logos/Sentimiento-Logotipo-Negro.PNG"
+            alt="Formal Shirt"
+            className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+          <div className="p-4 bg-white">
+            <Typography variant="h6" className="font-semibold">Classic Oxford Shirt</Typography>
+            <Typography className="text-gray-600 mb-2">Timeless oxford shirt perfect for any formal occasion</Typography>
+            <Typography className="text-xl font-bold text-blue-600">Sold Out (coming soon)</Typography>
+          </div>
+        </div>
       </div>
-      <Button
-        variant="text"
-        size="lg"
-        color="gray"
-        className="flex items-center gap-2 mt-24"
-      >
-        <ArrowSmallDownIcon className="h-5 w-5 font-bold text-gray-900" />
-        VIEW MORE
-      </Button>
-    </section>
+    </div>
   );
 }
 

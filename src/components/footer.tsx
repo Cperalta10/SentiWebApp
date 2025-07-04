@@ -4,15 +4,17 @@ import {
   Input,
   Button,
 } from "@material-tailwind/react";
+import Image from "next/image";
+import Link from "next/link";
 
 const CURRENT_YEAR = new Date().getFullYear();
-const LINKS = ["Company", "About Us", "Team", "Products", "Blog"];
+const LINKS = ["Page", "Shop", "Tours", "Contact"];
 
 export function Footer() {
   return (
     <footer className="pb-5 p-10 md:pt-10">
       <div className="container flex flex-col mx-auto">
-        <div className="flex !w-full py-10 mb-5 md:mb-20 flex-col justify-center !items-center bg-gray-900 container max-w-6xl mx-auto rounded-2xl p-5 ">
+        <div className="flex !w-full py-8 px-2 mb-5 md:mb-20 flex-col justify-center !items-center bg-gray-900 container max-w-6xl mx-auto rounded-2xl md:p-5 ">
           <Typography
             className="text-2xl md:text-3xl text-center font-bold "
             color="white"
@@ -21,74 +23,62 @@ export function Footer() {
           </Typography>
           <Typography
             color="white"
-            className=" md:w-7/12 text-center my-3 !text-base"
+            className="md:w-7/12 w-full text-center my-3 !text-base"
           >
             Get news in your inbox every week! We hate spam too, so no worries
             about this.
           </Typography>
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 md:flex-row">
-            <div className="w-80">
+          <div className="mt-8 flex flex-col items-center justify-center gap-2 md:flex-row md:gap-4 w-full">
+            <div className="w-full md:w-80">
               {/* @ts-ignore */}
-              <Input label="Email" color="white" />
+              <Input label="Email" color="white" className="w-full" />
             </div>
-            <Button size="md" className="lg:w-32" fullWidth color="white">
+            <Button size="md" className="w-full md:w-32" color="white">
               subscribe
             </Button>
           </div>
         </div>
         <div className="flex flex-col md:flex-row items-center !justify-between">
-          <Typography
-            as="a"
-            href="https://www.material-tailwind.com"
-            target="_blank"
-            variant="h6"
-            className="text-gray-900"
-          >
-            Material Tailwind
-          </Typography>
-          <ul className="flex justify-center my-4 md:my-0 w-max mx-auto items-center gap-4">
-            {LINKS.map((link, index) => (
-              <li key={index}>
-                <Typography
-                  as="a"
-                  href="#"
-                  variant="small"
-                  color="white"
-                  className="font-normal !text-gray-700 hover:!text-gray-900 transition-colors"
-                >
-                  {link}
-                </Typography>
-              </li>
-            ))}
-          </ul>
+          <Image src="/logos/Sentimiento-Logotipo-Negro.PNG" alt="Sentimiento Logo" width={100} height={100} />
           <div className="flex w-fit justify-center gap-2">
-            <IconButton size="sm" color="gray" variant="text">
-              <i className="fa-brands fa-twitter text-lg" />
-            </IconButton>
-            <IconButton size="sm" color="gray" variant="text">
-              <i className="fa-brands fa-youtube text-lg" />
-            </IconButton>
-            <IconButton size="sm" color="gray" variant="text">
-              <i className="fa-brands fa-instagram text-lg" />
-            </IconButton>
-            <IconButton size="sm" color="gray" variant="text">
-              <i className="fa-brands fa-github text-lg" />
-            </IconButton>
+            <Link href="https://www.instagram.com/sentimiento.x" target="_blank">
+              <IconButton size="sm" color="gray" variant="text">
+                <i className="fa-brands fa-instagram text-lg text-pink-500" />
+              </IconButton>
+            </Link>
+            <Link href="https://open.spotify.com/playlist/37i9dQZF1E4o2WrrviFj9D" target="_blank">
+              <IconButton size="sm" color="gray" variant="text">
+                <i className="fa-brands fa-spotify text-lg text-green-500" />
+              </IconButton>
+            </Link>
+            <Link href="https://www.youtube.com/@SentimientoOfficial" target="_blank">
+              <IconButton size="sm" color="gray" variant="text">
+                <i className="fa-brands fa-youtube text-lg text-red-500" />
+              </IconButton>
+            </Link>
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center mt-8">
+          <span className="font-semibold text-base text-gray-900 mb-1">Manager Contact Info</span>
+          <div className="flex flex-col gap-2 text-sm md:flex-row md:gap-4 md:text-base text-center text-gray-800 items-center">
+            <span className="flex items-center gap-1">
+              <i className="fa-brands fa-instagram text-pink-500" /> elevatewithG1
+            </span>
+            <span className="hidden md:inline">|</span>
+            <span className="flex items-center gap-1">
+              <i className="fa-regular fa-envelope text-blue-500" /> contact.elevatewithg1
+            </span>
+            <span className="hidden md:inline">|</span>
+            <span className="flex items-center gap-1">
+              <i className="fa-solid fa-phone text-green-500" /> (909) 706-2706
+            </span>
           </div>
         </div>
         <Typography
           color="blue-gray"
           className="text-center mt-12 font-normal !text-gray-700"
         >
-          &copy; {CURRENT_YEAR} Made with{" "}
-          <a href="https://www.material-tailwind.com" target="_blank">
-            Material Tailwind
-          </a>{" "}
-          by{" "}
-          <a href="https://www.creative-tim.com" target="_blank">
-            Creative Tim
-          </a>
-          .
+          &copy; Sentimiento {CURRENT_YEAR}
         </Typography>
       </div>
     </footer>

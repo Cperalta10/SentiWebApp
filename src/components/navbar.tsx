@@ -6,7 +6,16 @@ import Image from "next/image";
 
 export function Navbar() {
   return (
-    <MTNavbar shadow={false} fullWidth className="border-0 sticky top-0 z-50 bg-red-300">
+    <MTNavbar 
+      shadow={false} 
+      fullWidth 
+      className="border-0 sticky top-0 z-50 bg-red-300"
+      placeholder=""
+      onResize={undefined}
+      onResizeCapture={undefined}
+      onPointerEnterCapture={undefined}
+      onPointerLeaveCapture={undefined}
+    >
       <div className="flex items-center justify-center">
         <Image
           width={400}

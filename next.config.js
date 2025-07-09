@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'standalone',
   images: {
     remotePatterns: [
       {
@@ -7,7 +8,9 @@ const nextConfig = {
         hostname: "**",
       },
     ],
+    unoptimized: true,
   },
+  trailingSlash: false,
 };
 
 module.exports = nextConfig;

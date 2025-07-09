@@ -8,7 +8,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const CURRENT_YEAR = new Date().getFullYear();
-const LINKS = ["Page", "Shop", "Tours", "Contact"];
 
 export function Footer() {
   return (
@@ -18,12 +17,22 @@ export function Footer() {
           <Typography
             className="text-2xl md:text-3xl text-center font-bold "
             color="white"
+            placeholder=""
+            onResize={undefined}
+            onResizeCapture={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
             Join our community!
           </Typography>
           <Typography
             color="white"
             className="md:w-7/12 w-full text-center my-3 !text-base"
+            placeholder=""
+            onResize={undefined}
+            onResizeCapture={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
             Get news in your inbox every week! We hate spam too, so no worries
             about this.
@@ -33,7 +42,16 @@ export function Footer() {
               {/* @ts-ignore */}
               <Input label="Email" color="white" className="w-full" />
             </div>
-            <Button size="md" className="w-full md:w-32" color="white">
+            <Button 
+              size="md" 
+              className="w-full md:w-32" 
+              color="white"
+              placeholder=""
+              onResize={undefined}
+              onResizeCapture={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+            >
               subscribe
             </Button>
           </div>
@@ -42,17 +60,44 @@ export function Footer() {
           <Image src="/logos/Sentimiento-Logotipo-Negro.PNG" alt="Sentimiento Logo" width={100} height={100} />
           <div className="flex w-fit justify-center gap-2">
             <Link href="https://www.instagram.com/sentimiento.x" target="_blank">
-              <IconButton size="sm" color="gray" variant="text">
+              <IconButton 
+                size="sm" 
+                color="gray" 
+                variant="text"
+                placeholder=""
+                onResize={undefined}
+                onResizeCapture={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
+              >
                 <i className="fa-brands fa-instagram text-lg text-pink-500" />
               </IconButton>
             </Link>
             <Link href="https://open.spotify.com/playlist/37i9dQZF1E4o2WrrviFj9D" target="_blank">
-              <IconButton size="sm" color="gray" variant="text">
+              <IconButton 
+                size="sm" 
+                color="gray" 
+                variant="text"
+                placeholder=""
+                onResize={undefined}
+                onResizeCapture={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
+              >
                 <i className="fa-brands fa-spotify text-lg text-green-500" />
               </IconButton>
             </Link>
             <Link href="https://www.youtube.com/@SentimientoOfficial" target="_blank">
-              <IconButton size="sm" color="gray" variant="text">
+              <IconButton 
+                size="sm" 
+                color="gray" 
+                variant="text"
+                placeholder=""
+                onResize={undefined}
+                onResizeCapture={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
+              >
                 <i className="fa-brands fa-youtube text-lg text-red-500" />
               </IconButton>
             </Link>
@@ -77,6 +122,11 @@ export function Footer() {
         <Typography
           color="blue-gray"
           className="text-center mt-12 font-normal !text-gray-700"
+          placeholder=""
+          onResize={undefined}
+          onResizeCapture={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
         >
           &copy; Sentimiento {CURRENT_YEAR}
         </Typography>

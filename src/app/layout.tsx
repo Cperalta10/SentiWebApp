@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
-import { Layout, FixedPlugin } from "@/components";
+import { Layout } from "@/components";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -10,9 +10,12 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "NextJS Tailwind Blog Posts Page",
+  title: "Sentimiento - Artist",
   description:
-    "Download Tailwind Blog Post Page, a free webpage template developed by Creative Tim. Based on Tailwind CSS and Material Tailwind, see the live demo on our site and elevate your blogging experience!",
+    "Welcome to SentiWebApp, a creative space showcasing artistic works, digital art, and innovative projects. Explore a collection of visual stories and artistic expressions that capture emotions through technology and design.",
+  keywords: ["artist portfolio", "digital art", "creative projects", "visual arts", "artistic expression", "design", "creativity"],
+  authors: [{ name: "SentiWebApp Artist" }],
+  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({
@@ -35,7 +38,6 @@ export default function RootLayout({
       <body className={roboto.className}>
         <Layout>
           {children}
-          {/* <FixedPlugin /> */}
         </Layout>
       </body>
     </html>

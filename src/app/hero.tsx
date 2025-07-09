@@ -1,12 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { Typography } from "@material-tailwind/react";
 import Link from "next/link";
 
 function Hero() {
   return (
-    <div className="mt-28 w-full flex items-center justify-center px-4 md:px-8 lg:px-16">
+    <div className="mt-10 w-full flex items-center justify-center px-4 md:px-8 lg:px-16">
       <div className="max-w-5xl w-full flex flex-col md:flex-row items-center gap-12">
         <div className="w-full md:w-1/2">
           <Image

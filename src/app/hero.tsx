@@ -11,7 +11,7 @@ function Hero() {
           <Image
             width={400}
             height={400}
-            src="/image/DSC08859.jpg"
+            src="/image/DSC08859.JPG"
             alt="Sentimiento sitting"
             className="rounded-2xl"
             priority

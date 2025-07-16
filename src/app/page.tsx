@@ -12,7 +12,7 @@ export default function Campaign() {
       <Navbar />
       <Hero />
       <Posts />
-      {/* <Articles /> */}
+      <Articles />
       <Footer />
     </>
   );

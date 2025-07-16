@@ -9,7 +9,7 @@ export function Navbar() {
     <MTNavbar 
       shadow={false} 
       fullWidth 
-      className="border-0 sticky top-0 z-50 bg-red-300"
+      className="border-0 sticky top-0 z-50 bg-purple-900"
       placeholder=""
       onResize={undefined}
       onResizeCapture={undefined}

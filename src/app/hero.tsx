@@ -34,7 +34,7 @@ function Hero() {
               <div className="w-16 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
             </div>
             
-            <div className="flex justify-center space-x-8">
+            <div className="flex justify-center flex-wrap gap-6">
               {[
                 { 
                   href: "https://www.instagram.com/sentimiento.x", 
@@ -56,6 +56,13 @@ function Hero() {
                   icon: "fa-brands fa-youtube",
                   bgColor: "bg-gradient-to-br from-red-500 to-red-700",
                   hoverColor: "hover:from-red-600 hover:to-red-800"
+                },
+                { 
+                  href: "https://music.apple.com/us/artist/sentimiento/1464798149", 
+                  label: "Apple Music", 
+                  icon: "fa-brands fa-apple",
+                  bgColor: "bg-gradient-to-br from-gray-800 via-gray-600 to-gray-400",
+                  hoverColor: "hover:from-gray-900 hover:via-gray-700 hover:to-gray-500"
                 }
               ].map((link) => (
                 <Link
@@ -64,8 +71,8 @@ function Hero() {
                   target="_blank"
                   className="group relative"
                 >
-                  <div className={`w-20 h-20 ${link.bgColor} ${link.hoverColor} rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl shadow-lg`}>
-                    <i className={`${link.icon} text-white text-2xl`} />
+                  <div className={`w-16 h-16 ${link.bgColor} ${link.hoverColor} rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl shadow-lg`}>
+                    <i className={`${link.icon} text-white text-xl`} />
                   </div>
                   <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300">
                     <div className="bg-gray-900 text-white text-xs px-3 py-1 rounded-lg whitespace-nowrap">

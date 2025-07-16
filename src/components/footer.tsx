@@ -101,6 +101,20 @@ export function Footer() {
                 <i className="fa-brands fa-youtube text-lg text-red-500" />
               </IconButton>
             </Link>
+            <Link href="https://music.apple.com/us/artist/sentimiento/1464798149" target="_blank">
+              <IconButton 
+                size="sm" 
+                color="gray" 
+                variant="text"
+                placeholder=""
+                onResize={undefined}
+                onResizeCapture={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
+              >
+                <i className="fa-brands fa-apple text-lg text-black" />
+              </IconButton>
+            </Link>
           </div>
         </div>
         <div className="flex flex-col items-center justify-center mt-8">

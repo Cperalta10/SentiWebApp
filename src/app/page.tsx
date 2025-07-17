@@ -3,6 +3,7 @@ import { Navbar, Footer } from "@/components";
 
 // sections
 import Hero from "./hero";
+import MusicClips from "./music-clips";
 import Posts from "./posts";
 import Articles from "./articles";
 
@@ -11,6 +12,7 @@ export default function Campaign() {
     <>
       <Navbar />
       <Hero />
+      <MusicClips />
       <Posts />
       <Articles />
       <Footer />

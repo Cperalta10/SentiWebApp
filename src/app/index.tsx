@@ -1,8 +1,5 @@
-
-export * from "./hero";
-export * from "./layout";
-export * from "./page";
-export * from "./posts";
-export * from "./articles";
-
-
+export * from './bio';
+export * from './music-clips';
+export * from './shop';
+export * from './tour';
+export * from './layout';

@@ -1,11 +1,11 @@
 // components
-import { Navbar, Footer } from "@/components";
+import { Navbar, Footer } from '@/components';
 
 // sections
-import Hero from "./hero";
-import MusicClips from "./music-clips";
-import Posts from "./posts";
-import Articles from "./articles";
+import Hero from './bio';
+import MusicClips from './music-clips';
+import Posts from './shop';
+import Articles from './tour';
 
 export default function Campaign() {
   return (

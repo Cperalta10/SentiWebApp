@@ -1,21 +1,29 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
-import { Layout } from "@/components";
+import './globals.css';
+import type { Metadata } from 'next';
+import { Roboto } from 'next/font/google';
+import { Layout } from '@/components';
 
 const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "700", "900"],
-  display: "swap",
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '700', '900'],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: "Sentimiento - Artist",
+  title: 'Sentimiento - Artist',
   description:
-    "Welcome to SentiWebApp, a creative space showcasing artistic works, digital art, and innovative projects. Explore a collection of visual stories and artistic expressions that capture emotions through technology and design.",
-  keywords: ["artist portfolio", "digital art", "creative projects", "visual arts", "artistic expression", "design", "creativity"],
-  authors: [{ name: "SentiWebApp Artist" }],
-  viewport: "width=device-width, initial-scale=1",
+    'Welcome to SentiWebApp, a creative space showcasing artistic works, digital art, and innovative projects. Explore a collection of visual stories and artistic expressions that capture emotions through technology and design.',
+  keywords: [
+    'artist portfolio',
+    'digital art',
+    'creative projects',
+    'visual arts',
+    'artistic expression',
+    'design',
+    'creativity',
+  ],
+  authors: [{ name: 'SentiWebApp Artist' }],
+  viewport: 'width=device-width, initial-scale=1',
 };
 
 export default function RootLayout({
@@ -36,9 +44,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
       </head>
       <body className={roboto.className}>
-        <Layout>
-          {children}
-        </Layout>
+        <Layout>{children}</Layout>
       </body>
     </html>
   );

@@ -3,15 +3,15 @@ import {
   IconButton,
   Input,
   Button,
-} from "@material-tailwind/react";
-import Image from "next/image";
-import Link from "next/link";
+} from '@material-tailwind/react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const CURRENT_YEAR = new Date().getFullYear();
 
 export function Footer() {
   return (
-    <footer className="pb-5 p-10 md:pt-10">
+    <footer id="contact" className="pb-5 p-10 md:pt-10">
       <div className="container flex flex-col mx-auto">
         <div className="flex !w-full py-8 px-2 mb-5 md:mb-20 flex-col justify-center !items-center bg-gray-900 container max-w-6xl mx-auto rounded-2xl md:p-5 ">
           <Typography
@@ -42,9 +42,9 @@ export function Footer() {
               {/* @ts-ignore */}
               <Input label="Email" color="white" className="w-full" />
             </div>
-            <Button 
-              size="md" 
-              className="w-full md:w-32" 
+            <Button
+              size="md"
+              className="w-full md:w-32"
               color="white"
               placeholder=""
               onResize={undefined}
@@ -57,12 +57,20 @@ export function Footer() {
           </div>
         </div>
         <div className="flex flex-col md:flex-row items-center !justify-between">
-          <Image src="/logos/Sentimiento-Logotipo-Negro.PNG" alt="Sentimiento Logo" width={100} height={100} />
+          <Image
+            src="/logos/Sentimiento-Logotipo-Negro.PNG"
+            alt="Sentimiento Logo"
+            width={100}
+            height={100}
+          />
           <div className="flex w-fit justify-center gap-2">
-            <Link href="https://www.instagram.com/sentimiento.x" target="_blank">
-              <IconButton 
-                size="sm" 
-                color="gray" 
+            <Link
+              href="https://www.instagram.com/sentimiento.x"
+              target="_blank"
+            >
+              <IconButton
+                size="sm"
+                color="gray"
                 variant="text"
                 placeholder=""
                 onResize={undefined}
@@ -73,10 +81,13 @@ export function Footer() {
                 <i className="fa-brands fa-instagram text-lg text-pink-500" />
               </IconButton>
             </Link>
-            <Link href="https://open.spotify.com/playlist/37i9dQZF1E4o2WrrviFj9D" target="_blank">
-              <IconButton 
-                size="sm" 
-                color="gray" 
+            <Link
+              href="https://open.spotify.com/playlist/37i9dQZF1E4o2WrrviFj9D"
+              target="_blank"
+            >
+              <IconButton
+                size="sm"
+                color="gray"
                 variant="text"
                 placeholder=""
                 onResize={undefined}
@@ -87,10 +98,13 @@ export function Footer() {
                 <i className="fa-brands fa-spotify text-lg text-green-500" />
               </IconButton>
             </Link>
-            <Link href="https://www.youtube.com/@SentimientoOfficial" target="_blank">
-              <IconButton 
-                size="sm" 
-                color="gray" 
+            <Link
+              href="https://www.youtube.com/@SentimientoOfficial"
+              target="_blank"
+            >
+              <IconButton
+                size="sm"
+                color="gray"
                 variant="text"
                 placeholder=""
                 onResize={undefined}
@@ -101,10 +115,13 @@ export function Footer() {
                 <i className="fa-brands fa-youtube text-lg text-red-500" />
               </IconButton>
             </Link>
-            <Link href="https://music.apple.com/us/artist/sentimiento/1464798149" target="_blank">
-              <IconButton 
-                size="sm" 
-                color="gray" 
+            <Link
+              href="https://music.apple.com/us/artist/sentimiento/1464798149"
+              target="_blank"
+            >
+              <IconButton
+                size="sm"
+                color="gray"
                 variant="text"
                 placeholder=""
                 onResize={undefined}
@@ -118,19 +135,33 @@ export function Footer() {
           </div>
         </div>
         <div className="flex flex-col items-center justify-center mt-8">
-          <span className="font-semibold text-base text-gray-900 mb-1">Manager Contact Info</span>
+          <span className="font-semibold text-base text-gray-900 mb-1">
+            Manager Contact Info
+          </span>
           <div className="flex flex-col gap-2 text-sm md:flex-row md:gap-4 md:text-base text-center text-gray-800 items-center">
-            <span className="flex items-center gap-1">
-              <i className="fa-brands fa-instagram text-pink-500" /> elevatewithG1
-            </span>
+            <Link
+              href="https://www.instagram.com/elevatewithg1"
+              target="_blank"
+            >
+              <span className="flex items-center gap-1 hover:text-pink-500 transition-colors cursor-pointer">
+                <i className="fa-brands fa-instagram text-pink-500" />{' '}
+                elevatewithG1
+              </span>
+            </Link>
             <span className="hidden md:inline">|</span>
-            <span className="flex items-center gap-1">
-              <i className="fa-regular fa-envelope text-blue-500" /> contact.elevatewithg1
-            </span>
+            <Link href="mailto:contact.elevatewithg1@gmail.com">
+              <span className="flex items-center gap-1 hover:text-blue-500 transition-colors cursor-pointer">
+                <i className="fa-regular fa-envelope text-blue-500" />{' '}
+                contact.elevatewithg1
+              </span>
+            </Link>
             <span className="hidden md:inline">|</span>
-            <span className="flex items-center gap-1">
-              <i className="fa-solid fa-phone text-green-500" /> (909) 706-2706
-            </span>
+            <Link href="tel:+19097062706">
+              <span className="flex items-center gap-1 hover:text-green-500 transition-colors cursor-pointer">
+                <i className="fa-solid fa-phone text-green-500" /> (909)
+                706-2706
+              </span>
+            </Link>
           </div>
         </div>
         <Typography

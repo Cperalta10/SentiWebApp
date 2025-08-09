@@ -5,7 +5,7 @@ import { Navbar, Footer } from '@/components';
 import Hero from './bio';
 import MusicClips from './music-clips';
 import Posts from './shop';
-import Articles from './tour';
+import Articles from './show';
 
 export default function Campaign() {
   return (

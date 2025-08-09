@@ -64,7 +64,7 @@ export function Shop() {
             height={500}
             src="/store/shorts.png"
             alt="White Shorts"
-            className="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-[500px] object-cover group-hover:scale-105 transition-transformation duration-300"
           />
           <div className="p-4 bg-white">
             <h6 className="font-semibold text-lg">White Shorts</h6>

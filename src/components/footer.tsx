@@ -149,17 +149,19 @@ export function Footer() {
               </span>
             </Link>
             <span className="hidden md:inline">|</span>
-            <Link href="mailto:contact.elevatewithg1@gmail.com">
-              <span className="flex items-center gap-1 hover:text-blue-500 transition-colors cursor-pointer">
-                <i className="fa-regular fa-envelope text-blue-500" />{' '}
-                contact.elevatewithg1
-              </span>
-            </Link>
+            <a
+              href="mailto:contact.elevatewithg1@gmail.com"
+              className="flex items-center gap-1 hover:text-blue-500 transition-colors cursor-pointer"
+              onClick={e => e.stopPropagation()}
+            >
+              <i className="fa-regular fa-envelope text-blue-500" />{' '}
+              contact.elevatewithg1
+            </a>
             <span className="hidden md:inline">|</span>
-            <a 
-              href="tel:+19097062706" 
+            <a
+              href="tel:+19097062706"
               className="flex items-center gap-1 hover:text-green-500 transition-colors cursor-pointer"
-              onClick={(e) => e.stopPropagation()}
+              onClick={e => e.stopPropagation()}
             >
               <i className="fa-solid fa-phone text-green-500" /> (909) 706-2706
             </a>

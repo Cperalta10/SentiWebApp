@@ -156,12 +156,13 @@ export function Footer() {
               </span>
             </Link>
             <span className="hidden md:inline">|</span>
-            <Link href="tel:+19097062706">
-              <span className="flex items-center gap-1 hover:text-green-500 transition-colors cursor-pointer">
-                <i className="fa-solid fa-phone text-green-500" /> (909)
-                706-2706
-              </span>
-            </Link>
+            <a 
+              href="tel:+19097062706" 
+              className="flex items-center gap-1 hover:text-green-500 transition-colors cursor-pointer"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <i className="fa-solid fa-phone text-green-500" /> (909) 706-2706
+            </a>
           </div>
         </div>
         <Typography

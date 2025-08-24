@@ -99,7 +99,7 @@ export function Navbar() {
             )}
           </button>
           {isDropdownOpen && (
-            <div className="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-100 py-2 z-50 max-h-96 overflow-y-auto">
+            <div className="absolute right-0 mt-12 w-80 bg-white rounded-lg shadow-xl border border-gray-100 py-2 z-50 max-h-96 overflow-y-auto">
               {/* Navigation Section */}
               <div className="px-4 py-2 border-b border-gray-100">
                 <h3 className="text-sm font-semibold text-gray-600 uppercase tracking-wide">
